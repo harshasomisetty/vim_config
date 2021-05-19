@@ -3,6 +3,10 @@ inoremap kj <Esc>
 
 set number relativenumber
 
+autocmd VimEnter,BufNewFile,BufReadPost * silent! set mouse=
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
@@ -40,7 +44,7 @@ call plug#end()
 
 set undodir=~/.config/nvim/undodir
 source ~/.config/nvim/basic.vim
-source ~/.config/nvim/plugin_config.vim
+source ~/.config/nvim/configs.vim
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 let g:hardtime_default_on = 1

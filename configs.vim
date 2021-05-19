@@ -25,4 +25,5 @@ if has_key(plugs, 'syntastic')
 endif
 
 if has_key(plugs, 'coc.nvim')
-
+    source ~/.config/nvim/auto_coc.vim
+endif
