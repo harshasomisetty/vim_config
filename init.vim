@@ -2,7 +2,7 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 set number relativenumber
-
+set autoread
 autocmd VimEnter,BufNewFile,BufReadPost * silent! set mouse=
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -17,34 +17,32 @@ nnoremap <Down> <Nop>
 call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
-    Plug 'preservim/nerdtree'
     Plug 'tpope/vim-commentary'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'tpope/vim-fugitive'
 
     Plug 'sainnhe/sonokai'
-    Plug 'wikitopian/hardmode'
 
-    Plug 'vim-syntastic/syntastic'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'dense-analysis/ale'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'vim-syntastic/syntastic'
+    " Plug 'sheerun/vim-polyglot'
+    " Plug 'dense-analysis/ale'
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    Plug 'Vimjas/vim-python-pep8-indent'
+    Plug 'takac/vim-hardtime'
 
-    " Plug '
-
-
-
-    " Plug 'Valloric/YouCompleteMe'
-" List ends here. Plugins become visible to Vim after this call.
+    Plug 'jpalardy/vim-slime', { 'for': 'python' }
+    " Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'justinmk/vim-sneak'
 call plug#end()
 
-
-
 set undodir=~/.config/nvim/undodir
-source ~/.config/nvim/basic.vim
 source ~/.config/nvim/configs.vim
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+source ~/.config/nvim/nav.vim
+source ~/.config/nvim/gen.vim
 
-let g:hardtime_default_on = 1
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
