@@ -1,6 +1,3 @@
-inoremap jk <Esc>
-inoremap kj <Esc>
-
 set number relativenumber
 set autoread
 autocmd VimEnter,BufNewFile,BufReadPost * silent! set mouse=
@@ -21,7 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
-
+    Plug 'preservim/nerdtree'
     Plug 'sainnhe/sonokai'
 
     " Plug 'vim-syntastic/syntastic'
@@ -31,18 +28,31 @@ call plug#begin('~/.config/nvim/plugged')
 
     Plug 'takac/vim-hardtime'
 
+    " Plug 'justinmk/vim-sneak'
     Plug 'jpalardy/vim-slime', { 'for': 'python' }
     " Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
+
     Plug 'tmhedberg/SimpylFold'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    " Plug 'justinmk/vim-sneak'
+
+    Plug 'pangloss/vim-javascript'
+    Plug 'tomlion/vim-solidity'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+
+    " Plug 'morgsmccauley/vim-react-native-snippets'
+    " Plug 'SirVer/ultisnips'
+
 call plug#end()
 
 set undodir=~/.config/nvim/undodir
 source ~/.config/nvim/configs.vim
-source ~/.config/nvim/nav.vim
 source ~/.config/nvim/gen.vim
+source ~/.config/nvim/nav.vim
 
 " autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 

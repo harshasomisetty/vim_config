@@ -1,4 +1,5 @@
 
+let @a=':%s/Sushi/Kelp/g:%s/sushi/kelp/g:%s/SUSHI/KELP/g'
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -104,6 +105,7 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 
 " Linebreak on 500 characters
 set lbr

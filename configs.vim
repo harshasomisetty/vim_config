@@ -4,7 +4,11 @@ endif
 
 if has_key(plugs, 'fzf')
     nnoremap <silent> <C-t> :Files<CR>
-    nnoremap <C-p> :GFiles<CR>
+    " nnoremap <C-p> :GFiles<CR>
+endif
+
+if has_key(plugs, 'nerdtree')
+    nnoremap <C-P> :NERDTreeToggle<CR>
 endif
 
 if has_key(plugs, 'syntastic')
