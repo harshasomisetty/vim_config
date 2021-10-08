@@ -18,21 +18,12 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-fugitive'
-    Plug 'preservim/nerdtree'
     Plug 'sainnhe/sonokai'
 
     " Plug 'vim-syntastic/syntastic'
     " Plug 'sheerun/vim-polyglot'
     " Plug 'dense-analysis/ale'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    Plug 'takac/vim-hardtime'
-
-    " Plug 'justinmk/vim-sneak'
-    Plug 'jpalardy/vim-slime', { 'for': 'python' }
-    " Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
-
-    Plug 'tmhedberg/SimpylFold'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
@@ -53,6 +44,4 @@ set undodir=~/.config/nvim/undodir
 source ~/.config/nvim/configs.vim
 source ~/.config/nvim/gen.vim
 source ~/.config/nvim/nav.vim
-
-" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 

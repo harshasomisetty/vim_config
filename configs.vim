@@ -7,10 +7,6 @@ if has_key(plugs, 'fzf')
     " nnoremap <C-p> :GFiles<CR>
 endif
 
-if has_key(plugs, 'nerdtree')
-    nnoremap <C-P> :NERDTreeToggle<CR>
-endif
-
 if has_key(plugs, 'syntastic')
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
@@ -31,38 +27,3 @@ if has_key(plugs, 'syntastic')
 
 endif
 
-if has_key(plugs, 'vim-hardtime')
-    
-    " autocmd VimEnter, BufEnter, BufReadPost * silent! :HardTimeOn
-    let g:hardtime_default_on = 1
-    let g:hardtime_timeout = 4000
-    let g:hardtime_showmsg = 1
-endif
-
-if has_key(plugs, 'coc.nvim')
-    source ~/.config/nvim/cocsettings.vim
-endif
-
-if has_key(plugs, 'vim-slime')
-    " always use tmux
-    let g:slime_target = 'tmux'
-
-    let g:slime_paste_file = "$HOME/.config/nvim/.slime_paste"
-
-    " fix paste issues in ipython
-    let g:slime_python_ipython = 1
-
-    " always send text to the top-right pane in the current tmux tab without asking
-    let g:slime_default_config = {
-                \ 'socket_name': get(split($TMUX, ','), 0),
-                \ 'target_pane': '{top-right}' }
-    let g:slime_dont_ask_default = 1
-endif
-
-if has_key(plugs, 'vim-ipython-shell')
-    source ~/.conf/nvim/ipythonconf.vim
-endif
-
-if has_key(plugs, 'vim-ipython')
-
-endif
